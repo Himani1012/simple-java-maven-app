@@ -54,7 +54,7 @@ pipeline {
                         // or globally to the entire master navigating to  "Manage Jenkins / Global Tools Configuration"
                         // mavenSettingsConfig: 'my-maven-settings' // (3)
                     ) {
-                        withSonarQubeEnv() {
+                        withSonarQubeEnv('sonarqube') {
                           sh "mvn clean verify sonar:sonar -Dsonar.projectKey=simple-java-maven-app -Dsonar.projectName='simple-java-maven-app'"
                         }
                     }
