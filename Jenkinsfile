@@ -55,7 +55,7 @@ pipeline {
                         // mavenSettingsConfig: 'my-maven-settings' // (3)
                     ) {
                         withSonarQubeEnv() {
-                          sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=simple-java-maven-app -Dsonar.projectName='simple-java-maven-app'"
+                          sh "mvn clean verify sonar:sonar -Dsonar.projectKey=simple-java-maven-app -Dsonar.projectName='simple-java-maven-app'"
                         }
                     }
               }
